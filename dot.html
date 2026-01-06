@@ -1,0 +1,218 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點點的詳細資料 - 貓咪守護計畫</title>
+    <style>
+        /* 保持與首頁一致的視覺風格 */
+        :root {
+            --warm-pink: #f8d7da;
+            --wood-brown: #5d4037;
+            --glass-white: rgba(255, 255, 255, 0.6);
+            --accent-color: #8d6e63;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #fff1f0 100%);
+            background-attachment: fixed;
+            color: var(--wood-brown);
+        }
+
+        /* 導覽列 */
+        nav {
+            background-color: rgba(141, 110, 99, 0.95);
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 詳細頁面卡片 */
+        .detail-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .photo-section img {
+            width: 100%;
+            height: 400px; /* 固定高度保持整齊 */
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* 狀態標籤樣式 */
+        .status-badge {
+            display: inline-block;
+            background-color: #ffb74d; /* 點點用橘色系代表活力 */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+
+        .info-section h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .story-text {
+            line-height: 1.8;
+            color: #4e342e;
+            margin-bottom: 30px;
+        }
+
+        /* 表單樣式 */
+        .donation-form {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6d4c41;
+        }
+
+        @media (max-width: 768px) {
+            .detail-card {
+                grid-template-columns: 1fr;
+            }
+            .photo-section img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div style="font-size: 1.2rem; font-weight: bold;">浪貓守護計畫</div>
+    <a href="index.html">← 返回列表</a>
+</nav>
+
+<div class="container">
+    <div class="detail-card">
+        
+        <div class="photo-section">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/domestic-gray-tabby-cat-with-an-orange-nose-is-royalty-free-image-1686039395.jpg?crop=0.668xw:1.00xh;0.264xw,0" alt="點點的照片">
+            <div style="text-align: center;">
+                <span class="status-badge">活力充沛</span>
+                <span class="status-badge" style="background-color: #81c784;">親人親貓</span>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h1>點點 (Dot)</h1>
+            <p><strong>年齡：</strong>1 歲 ｜ <strong>性別：</strong>男生 ｜ <strong>花色：</strong>黑白賓士</p>
+            
+            <div class="story-text">
+                <p>點點是收容所裡的開心果，沒有一刻是靜下來的！他最喜歡追著逗貓棒跑，擁有用不完的精力。</p>
+                <p>他非常適合家裡已經有貓咪，需要一個玩伴的家庭。目前他很健康，只需要很多的罐罐和玩具來消耗他的體力。</p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0;">
+
+            <h3>💖 我想帶點點回家 / 捐贈</h3>
+            <form class="donation-form">
+                <div class="form-group">
+                    <label>您的稱呼</label>
+                    <input type="text" placeholder="例如：李小美">
+                </div>
+                
+                <div class="form-group">
+                    <label>我想提供協助</label>
+                    <select>
+                        <option>預約認養互動</option>
+                        <option>捐贈貓咪玩具/抓板</option>
+                        <option>捐贈幼貓罐頭</option>
+                        <option>贊助結紮費用</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>留言給我們</label>
+                    <textarea rows="3" placeholder="想對點點說的話，或留下聯絡方式..."></textarea>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="alert('收到！點點期待與您見面！')">送出申請</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
